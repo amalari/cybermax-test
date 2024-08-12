@@ -1,0 +1,24 @@
+import { convertFromDirectory } from 'joi-to-typescript';
+
+async function types(): Promise<void> {
+  // eslint-disable-next-line no-console
+  console.log('Running joi-to-typescript...');
+
+  // Configure your settings here
+  const result = await convertFromDirectory({
+    schemaDirectory: `${__dirname}/../src/schemas`,
+    typeOutputDirectory: `${__dirname}/../src/interfaces`,
+    debug: true,
+    defaultInterfaceSuffix: "SchemaType"
+  });
+
+  if (result) {
+    // eslint-disable-next-line no-console
+    console.log('Completed joi-to-typescript');
+  } else {
+    // eslint-disable-next-line no-console
+    console.log('Failed to run joi-to-typescript');
+  }
+}
+
+types();

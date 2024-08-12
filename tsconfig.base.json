@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cybermax-test-1/database": ["packages/database/src/index.ts"],
+      "@cybermax-test-1/nest-database": ["packages/nest-database/src/index.ts"],
+      "@cybermax-test-1/nest-location-service": [
+        "packages/nest-location-service/src/index.ts"
+      ],
+      "@cybermax-test-1/validator": ["packages/validator/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
